@@ -1,0 +1,36 @@
+.bg-elements-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Subtle glow gradients (already defining in index.css but keeping specific bg ones here) */
+.top-radial {
+  background: radial-gradient(circle at 10% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+}
+
+.bottom-radial {
+  background: radial-gradient(circle at 90% 100%, rgba(59, 130, 246, 0.06) 0%, transparent 50%);
+}
+
+.floating-icon {
+  position: absolute;
+  color: var(--accent-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.05;
+  filter: blur(0.5px);
+}
