@@ -21,32 +21,31 @@ const Resume = () => {
 
   const experience = [
     {
-      degree: 'AI-Intern',
-      institution: 'IBM with AICIT',
-      period: 'Aug 2024 - Sep 2024',
-      description: 'Built and fine-tuned intelligent AI/ML solutions for real-world data insights.'
+      degree: 'Data Science Intern',
+      institution: 'Celebal Technologies',
+      period: 'Internship',
+      description: 'Applied data science and machine learning skills in a professional, delivery-focused environment.'
     },
     {
-      degree: 'Data Science & ML Intern',
-      institution: 'Infotact (Remote)',
-      period: '2024',
-      description: 'Built and optimized data models using Python and Scikit-learn for insightful analysis.'
+      degree: 'Full-Stack Developer',
+      institution: 'Napses Technologies',
+      period: 'Internship',
+      description: 'Contributed to web application development across the frontend and backend stack.'
     },
     {
-      degree: 'AI/ML Intern',
-      institution: 'OASIS INFOBYTE (Remote)',
-      period: 'June 2024',
-      description: 'Developed and deployed AI/ML models for predictive analytics.'
+      degree: 'Research & AI/ML Internships',
+      institution: 'MNIT, IBM & Infotact',
+      period: 'Research / Industry',
+      description: 'Built hands-on foundations in AI, machine learning, research, and data-driven problem solving.'
     }
   ];
 
   const honors = [
-    'RIFT Hackathon - Finalist in Noida PW IOI (Physical Wallah)',
-    'IMC (India Mobile Congress) - Delhi Selected',
-    'Hackathon Finalist - AI Agentic',
-    'Gen AI Lab - Jaipur',
-    'Data Structures and Algorithms - CodeChef',
-    'HackerRank - Problem Solving',
+    '1st Position - Code Nakshatra 2, Code Rangers',
+    'CodeHive GFG participant - GeeksforGeeks, Noida',
+    '14+ hackathons across AI, software and innovation tracks',
+    '23 professional licenses and certifications',
+    'Captain, Football Team; event-management enthusiast',
   ];
 
   const professionalSkills = [
@@ -119,13 +118,13 @@ const Resume = () => {
             </div>
 
             <div className="resume-action">
-              <h4>Ready to collaborate?</h4>
-              <p>Download my full resume to see more details about my projects and technical background.</p>
+              <h4>Let’s create impact together.</h4>
+              <p>Download my resume for a concise overview of my education, experience, skills, and project work.</p>
               <div className="resume-btns">
-                <a href="/resume.png" download="Abhijeet_Kasera_Resume.png" className="btn btn-primary">
+                <a href="/Abhijeet-Kasera-Resume.pdf" download="Abhijeet_Kasera_Resume.pdf" className="btn btn-primary">
                   <Download size={18} /> Download Resume
                 </a>
-                <a href="/resume.png" target="_blank" rel="noreferrer" className="btn btn-secondary">
+                <a href="/Abhijeet-Kasera-Resume.pdf" target="_blank" rel="noreferrer" className="btn btn-secondary">
                   <Eye size={18} /> View Online
                 </a>
               </div>
