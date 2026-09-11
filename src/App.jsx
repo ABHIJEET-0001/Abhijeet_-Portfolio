@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Learning from './components/Learning';
 import GithubStats from './components/GithubStats';
 import Resume from './components/Resume';
+import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackgroundElements from './components/BackgroundElements';
@@ -56,6 +57,7 @@ function App() {
               <GithubStats />
             </>
           } />
+          <Route path="/certificates" element={<Certificates />} />
           <Route path="/growth" element={<Learning />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
