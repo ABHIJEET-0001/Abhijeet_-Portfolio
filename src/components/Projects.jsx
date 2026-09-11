@@ -6,6 +6,16 @@ import './Projects.css';
 
 const featuredProjects = [
   {
+    id: 'ecotrack-ai',
+    name: 'EcoTrack AI',
+    description: 'AI-powered sustainability & carbon tracking platform. Monitor real-time CO2 emissions, green score analytics, 6-month trends, category breakdowns, and personalized AI climate tips.',
+    tags: ['React', 'Node.js', 'AI Analytics', 'Chart.js', 'Tailwind CSS'],
+    github: 'https://github.com/ABHIJEET-0001',
+    demo: '#',
+    image: '/projects/ecotrack-ai.png',
+    featured: true
+  },
+  {
     id: 1,
     name: 'Money Mule Detection System',
     description: 'ML-based fraud detection system identifying money mule patterns. Engineered multi-factor indicators and implemented Random Forest classifier.',
