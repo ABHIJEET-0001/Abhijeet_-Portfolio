@@ -5,6 +5,21 @@ import './Certificates.css';
 
 const certificatesData = [
   {
+    id: 'cert-celebal',
+    title: 'Celebal Excellence Internship - Data Science',
+    issuer: 'Celebal Technologies',
+    category: 'Internships',
+    date: '08 Jun 2026 - 08 Aug 2026',
+    type: 'Data Science Intern (ID: CT_CSI_DS_876)',
+    description: 'Completed the Celebal Excellence Internship 2026 in Data Science under Senior Manager Sharthak Acharjee. Exhibited excellent problem-solving, predictive analytics, machine learning models, and data processing skills.',
+    skills: ['Data Science', 'Python', 'Machine Learning', 'Predictive Analytics', 'SQL', 'Data Pipeline'],
+    image: '/certificates/celebal-technologies-internship.pdf',
+    isPdf: true,
+    credentialUrl: '/certificates/celebal-technologies-internship.pdf',
+    badgeText: 'Celebal Excellence Internship',
+    featured: true
+  },
+  {
     id: 'cert-napses',
     title: 'Full-Stack & React Native Dev Internship',
     issuer: 'Napses Technologies Pvt. Ltd.',
@@ -86,19 +101,6 @@ const certificatesData = [
     image: '/certificates/shankara-global-hackathon.png',
     credentialUrl: '/certificates/shankara-global-hackathon.png',
     badgeText: 'Global Hackathon'
-  },
-  {
-    id: 'cert-celebal',
-    title: 'Data Science Internship Certificate',
-    issuer: 'Celebal Technologies',
-    category: 'Internships',
-    date: '2024',
-    type: 'Data Science Internship',
-    description: 'Applied data science, machine learning models, data pipeline building, and predictive analytics in a commercial software production setting.',
-    skills: ['Python', 'Data Science', 'Machine Learning', 'SQL', 'Data Analytics'],
-    image: 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=800&auto=format&fit=crop',
-    credentialUrl: '#',
-    badgeText: 'Verified Internship'
   },
   {
     id: 'cert-mnit-ibm',
