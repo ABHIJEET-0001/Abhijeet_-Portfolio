@@ -1,9 +1,24 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, Briefcase, Trophy, ExternalLink, Eye, Download, X, Search, CheckCircle, ShieldCheck, Sparkles, Star } from 'lucide-react';
+import { Award, Briefcase, Trophy, ExternalLink, Eye, Download, X, Search, CheckCircle, ShieldCheck, Sparkles, Star, FileText } from 'lucide-react';
 import './Certificates.css';
 
 const certificatesData = [
+  {
+    id: 'cert-napses',
+    title: 'Full-Stack & React Native Dev Internship',
+    issuer: 'Napses Technologies Pvt. Ltd.',
+    category: 'Internships',
+    date: '02 June 2026 - 24 Aug 2026',
+    type: 'Dev - Intern (EMP ID: NPSI0041)',
+    description: 'Hands-on internship reporting to Bangalore office under Head of Engineering (Praveen M V). Worked on React Native mobile apps, Android Studio, REST API integration, Git version control, bug fixing, and SDLC.',
+    skills: ['React Native', 'Android Studio', 'REST APIs', 'Git', 'Debugging', 'SDLC'],
+    image: '/certificates/napses-technologies-internship.pdf',
+    isPdf: true,
+    credentialUrl: '/certificates/napses-technologies-internship.pdf',
+    badgeText: 'Verified Internship Letter',
+    featured: true
+  },
   {
     id: 'cert-nakshatra',
     title: '1st Position - CODE Nakshatra-II',
@@ -14,7 +29,7 @@ const certificatesData = [
     description: 'Secured 1st Position in the 24-hour high-intensity hackathon CODE Nakshatra-II organized by CODE RANGERS at TIIPS, Greater Noida with Team F1MAX.',
     skills: ['24-hr Hackathon', 'Rapid Prototyping', 'Team Leadership', 'Problem Solving'],
     image: '/certificates/code-nakshatra-2-1st-place.png',
-    credentialUrl: '#',
+    credentialUrl: '/certificates/code-nakshatra-2-1st-place.png',
     badgeText: '🏆 1st Place Award',
     featured: true
   },
@@ -28,7 +43,7 @@ const certificatesData = [
     description: 'Participated in THE BIG SHIFT 1.0 organized by CodeHive at GeeksforGeeks Headquarters in Noida, demonstrating active enthusiasm towards technology and innovation.',
     skills: ['GeeksforGeeks Noida', 'System Design', 'Algorithms', 'Community Learning'],
     image: '/certificates/codehive-gfg-the-big-shift.png',
-    credentialUrl: '#',
+    credentialUrl: '/certificates/codehive-gfg-the-big-shift.png',
     badgeText: 'GFG Noida Hackathon',
     featured: true
   },
@@ -42,7 +57,7 @@ const certificatesData = [
     description: 'Mastered the fundamentals of agentic workflows and vibe coding during the high-intensity on-ground AMD Slingshot Campus Days Ideathon in Jaipur.',
     skills: ['Agentic Workflows', 'Vibe Coding', 'AI Ideation', 'AMD Slingshot'],
     image: '/certificates/amd-slingshot-ideathon.png',
-    credentialUrl: '#',
+    credentialUrl: '/certificates/amd-slingshot-ideathon.png',
     badgeText: 'AMD Certified',
     featured: true
   },
@@ -56,7 +71,7 @@ const certificatesData = [
     description: 'Participated in Techno Tarang Hackathon 3.0 ("Where Code Builds The Future of Earth") organized by Poornima College of Engineering in Jaipur.',
     skills: ['Hack2Skill', 'Sustainable Tech', 'Full-Stack Web', 'Rapid Development'],
     image: '/certificates/techno-tarang-hackathon-3.png',
-    credentialUrl: '#',
+    credentialUrl: '/certificates/techno-tarang-hackathon-3.png',
     badgeText: 'National Hackathon'
   },
   {
@@ -69,7 +84,7 @@ const certificatesData = [
     description: 'Participated in the 24-hour non-stop Shankara Global Hackathon Innovation & Startup Competition in association with RTU-Kota, MBM-Jodhpur & BTU-Bikaner.',
     skills: ['24-hr Non-Stop Coding', 'Startup Innovation', 'Full Stack Development'],
     image: '/certificates/shankara-global-hackathon.png',
-    credentialUrl: '#',
+    credentialUrl: '/certificates/shankara-global-hackathon.png',
     badgeText: 'Global Hackathon'
   },
   {
@@ -82,19 +97,6 @@ const certificatesData = [
     description: 'Applied data science, machine learning models, data pipeline building, and predictive analytics in a commercial software production setting.',
     skills: ['Python', 'Data Science', 'Machine Learning', 'SQL', 'Data Analytics'],
     image: 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=800&auto=format&fit=crop',
-    credentialUrl: '#',
-    badgeText: 'Verified Internship'
-  },
-  {
-    id: 'cert-napses',
-    title: 'Full-Stack Developer Internship',
-    issuer: 'Napses Technologies',
-    category: 'Internships',
-    date: '2024',
-    type: 'Web Dev Internship',
-    description: 'Developed modern responsive web frontends, backend RESTful services, database schema design, and deployment pipelines.',
-    skills: ['React.js', 'Node.js', 'Express', 'MongoDB', 'REST APIs'],
-    image: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=800&auto=format&fit=crop',
     credentialUrl: '#',
     badgeText: 'Verified Internship'
   },
@@ -113,7 +115,7 @@ const certificatesData = [
   }
 ];
 
-const categories = ['All', 'Hackathons', 'Internships', 'Certifications'];
+const categories = ['All', 'Internships', 'Hackathons', 'Certifications'];
 
 const Certificates = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -139,13 +141,13 @@ const Certificates = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="badge-pill">
-            <ShieldCheck size={16} className="badge-icon" /> Verified Credentials & Awards
+            <ShieldCheck size={16} className="badge-icon" /> Verified Credentials & Experience Letters
           </div>
           <h2 className="outfit section-title">
-            Certificates & <span className="gradient-text">Hackathons</span>
+            Certificates & <span className="gradient-text">Experience</span>
           </h2>
           <p className="section-description">
-            A showcase of my official hackathon wins, participation credentials, internship certificates, and AI/ML specializations.
+            Official internship completion letters, hackathon top achievements, and technical certifications.
           </p>
         </motion.div>
 
@@ -163,8 +165,8 @@ const Certificates = () => {
                 className={`tab-btn ${activeCategory === cat ? 'active' : ''}`}
                 onClick={() => setActiveCategory(cat)}
               >
-                {cat === 'Hackathons' && <Trophy size={15} />}
                 {cat === 'Internships' && <Briefcase size={15} />}
+                {cat === 'Hackathons' && <Trophy size={15} />}
                 {cat === 'Certifications' && <Award size={15} />}
                 {cat === 'All' && <Sparkles size={15} />}
                 <span>{cat}</span>
@@ -176,7 +178,7 @@ const Certificates = () => {
             <Search size={18} className="search-icon" />
             <input 
               type="text" 
-              placeholder="Search by title, event, skill, or org..."
+              placeholder="Search by title, company, skill, or org..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -206,10 +208,17 @@ const Certificates = () => {
                 onClick={() => setSelectedCert(cert)}
               >
                 <div className="cert-preview">
-                  <img src={cert.image} alt={cert.title} loading="lazy" />
+                  {cert.isPdf ? (
+                    <div className="pdf-card-preview">
+                      <FileText size={48} className="pdf-icon" />
+                      <span className="pdf-label">PDF Document</span>
+                    </div>
+                  ) : (
+                    <img src={cert.image} alt={cert.title} loading="lazy" />
+                  )}
                   <div className="cert-overlay">
                     <span className="view-btn">
-                      <Eye size={18} /> View Full Certificate
+                      <Eye size={18} /> View Document
                     </span>
                   </div>
                   <span className="cert-type-badge">{cert.badgeText}</span>
@@ -240,7 +249,7 @@ const Certificates = () => {
                       e.stopPropagation();
                       setSelectedCert(cert);
                     }}>
-                      <CheckCircle size={15} /> View Details & Certificate
+                      <CheckCircle size={15} /> View Full Document & Details
                     </button>
                   </div>
                 </div>
@@ -280,7 +289,15 @@ const Certificates = () => {
 
                 <div className="modal-body">
                   <div className="modal-image-container">
-                    <img src={selectedCert.image} alt={selectedCert.title} />
+                    {selectedCert.isPdf ? (
+                      <iframe 
+                        src={selectedCert.image} 
+                        title={selectedCert.title}
+                        className="modal-pdf-frame"
+                      />
+                    ) : (
+                      <img src={selectedCert.image} alt={selectedCert.title} />
+                    )}
                   </div>
 
                   <div className="modal-details">
@@ -289,11 +306,11 @@ const Certificates = () => {
                     
                     <div className="modal-meta-grid">
                       <div>
-                        <span className="meta-label">Organized By / Issuer</span>
+                        <span className="meta-label">Organized By / Company</span>
                         <span className="meta-value">{selectedCert.issuer}</span>
                       </div>
                       <div>
-                        <span className="meta-label">Date / Period</span>
+                        <span className="meta-label">Tenure / Date</span>
                         <span className="meta-value">{selectedCert.date}</span>
                       </div>
                       <div>
@@ -301,13 +318,13 @@ const Certificates = () => {
                         <span className="meta-value">{selectedCert.category}</span>
                       </div>
                       <div>
-                        <span className="meta-label">Honor / Status</span>
+                        <span className="meta-label">Role / Status</span>
                         <span className="meta-value">{selectedCert.type}</span>
                       </div>
                     </div>
 
                     <div className="modal-section">
-                      <h4>Event Overview & Achievement</h4>
+                      <h4>Overview & Responsibilities</h4>
                       <p>{selectedCert.description}</p>
                     </div>
 
@@ -326,9 +343,9 @@ const Certificates = () => {
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="modal-btn primary-btn"
-                        download={`${selectedCert.title}.png`}
+                        download
                       >
-                        <Download size={18} /> Open / Download Full Resolution
+                        <Download size={18} /> Download Full Document ({selectedCert.isPdf ? 'PDF' : 'PNG'})
                       </a>
                     </div>
                   </div>
